@@ -1,0 +1,69 @@
+{%
+    set items = [
+        {
+            title: "Mais où qu'il cause donc tant ?",
+            img: "https://jancovici.com/wp-content/uploads/2016/05/Photo-conférence-Jancovici-1920x1280-1024x683.jpg",
+            id: 1,
+            date: "04/12/2020"
+        },
+        {
+            title: "Un entretien dans l’Usine Nouvelle fin novembre 2020",
+            img: "https://jancovici.com/wp-content/uploads/2020/06/conso-energie-finale-france-1024x586.png",
+            id: 1,
+            date: "28/11/2020"
+        },
+        {
+            title: "Soyons neutres",
+            img: "https://jancovici.com/wp-content/uploads/2020/11/carbon-neutral-1024x939.jpg",
+            id: 1,
+            date: "26/11/2020"
+        },
+        {
+            title:"Peut-on concilier énergie en baisse, chômage en baisse, et fiche de paie en hausse ?",
+            img: "https://jancovici.com/wp-content/uploads/2020/11/carbon-neutral-1024x939.jpg",
+            id: 1,
+            date: "26/11/2020"
+        },
+        {
+            title:"Moins de degrés et plus d'argent ?",
+            img: "https://jancovici.com/wp-content/uploads/2020/11/carbon-neutral-1024x939.jpg",
+            id: 1,
+            date: "26/11/2020"
+        },
+        {
+            title:"Sus à l'hydrogène",
+            img: "https://jancovici.com/wp-content/uploads/2020/11/carbon-neutral-1024x939.jpg",
+            id: 1,
+            date: "26/11/2020"
+        }
+    ]
+%}
+<div>
+<hr class="transform translate-y-3 " />
+
+<h4 class="relative z-10  uppercase text-center divide-y divide-yellow-500">
+    <span class="bg-white px-4">Les plus récents</span>
+</h4>
+</div>
+<div
+    class="grid sm:grid-cols-1 md:grid-cols-3 gap-5 py-5"
+>
+{% for item in items %}
+
+    <div
+        class="border-solid border rounded border-gray-200 cursor-pointer hover:shadow-md"
+    >
+        <img class="h-40 w-full object-cover" alt="Image alt" src="{{ item.img }}" />
+        <div class="p-4">
+            <p class="text-sm text-gray-300 italic">{{ item.date }}</p>
+            <h3 class="text-gray-900 font-serif text-xl">{{ item.title }}</h3>
+            <p>
+                <span class=" p-1 bg-blue-200 text-blue-500 text-sm uppercase spacing-xl">
+                Bric à brac
+                </span>
+            </p>
+        </div>
+    </div>
+    {% endfor %}
+
+</div>
