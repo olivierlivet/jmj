@@ -67,11 +67,11 @@ module.exports = function (eleventyConfig) {
           return `  <source type="image/${imageFormat[0].format}" srcset="${imageFormat.map(entry => entry.srcset).join(", ")}" sizes="${sizes}">`;
         }).join("\n")}
           <img
-            class="w-full
+            class="w-full"
             src="${lowsrc.url}"
             width="${lowsrc.width}"
             height="${lowsrc.height}"
-            alt="${alt}">
+            alt="${alt}" />
         </picture>`;
     });
     
