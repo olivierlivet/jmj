@@ -68,7 +68,7 @@ module.exports = function (eleventyConfig) {
         }).join("\n")}
           <img
             class="w-full
-            src="${lowsrc.url.replaceAll(' ','/')}"
+            src="${lowsrc.url}"
             width="${lowsrc.width}"
             height="${lowsrc.height}"
             alt="${alt}">
