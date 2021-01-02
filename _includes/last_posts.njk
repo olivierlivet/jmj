@@ -2,37 +2,37 @@
     set items = [
         {
             title: "Mais où qu'il cause donc tant ?",
-            img: "https://jancovici.com/wp-content/uploads/2016/05/Photo-conférence-Jancovici-1920x1280-1024x683.jpg",
+            img: "./src/images/conference.jpg",
             id: 1,
             date: "04/12/2020"
         },
         {
             title: "Un entretien dans l’Usine Nouvelle fin novembre 2020",
-            img: "https://jancovici.com/wp-content/uploads/2020/06/conso-energie-finale-france-1024x586.png",
+            img: "./src/images/conso-energie.png",
             id: 1,
             date: "28/11/2020"
         },
         {
             title: "Soyons neutres",
-            img: "https://jancovici.com/wp-content/uploads/2020/11/carbon-neutral-1024x939.jpg",
+            img: "./src/images/carbone-neutral.jpg",
             id: 1,
             date: "26/11/2020"
         },
         {
             title:"Peut-on concilier énergie en baisse, chômage en baisse, et fiche de paie en hausse ?",
-            img: "https://jancovici.com/wp-content/uploads/2020/11/carbon-neutral-1024x939.jpg",
+            img: "./src/images/carbone-neutral.jpg",
             id: 1,
             date: "26/11/2020"
         },
         {
             title:"Moins de degrés et plus d'argent ?",
-            img: "https://jancovici.com/wp-content/uploads/2020/11/carbon-neutral-1024x939.jpg",
+            img: "./src/images/carbone-neutral.jpg",
             id: 1,
             date: "26/11/2020"
         },
         {
             title:"Sus à l'hydrogène",
-            img: "https://jancovici.com/wp-content/uploads/2020/11/carbon-neutral-1024x939.jpg",
+            img: "./src/images/carbone-neutral.jpg",
             id: 1,
             date: "26/11/2020"
         }
@@ -53,7 +53,11 @@
     <div
         class="border-solid border rounded border-gray-200 cursor-pointer hover:shadow-md"
     >
-        <img class="h-40 w-full object-cover" alt="Image alt" src="{{ item.img }}" />
+        {# <img class="h-40 w-full object-cover" alt="Image alt" src="{{ item.img }}" /> #}
+
+        {% responsiveimage item.img , "photo of my cat", "(min-width: 30em) 50vw, 100vw" %}
+
+
         <div class="p-4">
             <p class="text-sm text-gray-300 italic">{{ item.date }}</p>
             <h3 class="text-gray-900 font-serif text-xl">{{ item.title }}</h3>
